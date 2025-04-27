@@ -143,18 +143,17 @@ export default function ComingSoonWebsite() {
             <span>Launch</span>
           </div>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 w-full max-w-4xl px-4">
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className={`aspect-square bg-stone-800 rounded-md overflow-hidden relative transition-all duration-1000 transform ${
+              className={`aspect-square bg-stone-800 rounded-md overflow-hidden relative transition-all duration-300 ease-out transform hover:-translate-y-3 ${
                 loaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`}
-              style={{ transitionDelay: `${i * 200}ms` }}>
-
+              style={{ transitionDelay: `${i}ms` }}>
               <div
-                className="absolute inset-0 bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-out hover:scale-105"
                 style={{
                   backgroundImage: `url('/assets/design${i}.webp')`,
                 }}></div>
@@ -162,6 +161,7 @@ export default function ComingSoonWebsite() {
             </div>
           ))}
         </div>
+
         <div className="w-full max-w-md mb-16">
           {!isSubmitted ? (
             <>
@@ -193,7 +193,6 @@ export default function ComingSoonWebsite() {
             </div>
           )}
         </div>
-
 
         <button className="group flex items-center mb-6 py-3 px-6 border border-stone-700 rounded-full hover:bg-stone-800 transition-colors duration-300">
           <span className="mr-2">Stay Tuned</span>
