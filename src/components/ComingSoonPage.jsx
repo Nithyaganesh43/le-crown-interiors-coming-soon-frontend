@@ -16,15 +16,13 @@ export default function ComingSoonWebsite() {
   useEffect(() => {
     setLoaded(true);
     
-    // Simulate progress increase over time
     const interval = setInterval(() => {
       setProgressValue(prev => {
         const newValue = prev + 1;
-        return newValue <= 80 ? newValue : 80;
+        return newValue <= 40 ? newValue : 40;
       });
     }, 100);
 
-    // Calculate time until July 1st
     const calculateTimeLeft = () => {
       const now = new Date();
       const launchDate = new Date('2025-07-01T00:00:00');
@@ -38,7 +36,6 @@ export default function ComingSoonWebsite() {
           seconds: Math.floor((difference / 1000) % 60)
         });
       } else {
-        // If the launch date has passed
         setTimeLeft({
           days: 0,
           hours: 0,
@@ -48,10 +45,8 @@ export default function ComingSoonWebsite() {
       }
     };
 
-    // Initial calculation
     calculateTimeLeft();
     
-    // Update every second
     const timer = setInterval(calculateTimeLeft, 1000);
     
     return () => {
@@ -64,15 +59,12 @@ export default function ComingSoonWebsite() {
     e.preventDefault();
     if (email.trim() !== '') {
       setIsSubmitted(true);
-      // This would typically connect to an API to save the email
     }
   };
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-stone-900 text-stone-100 font-sans">
-      {/* Parallax Background Images */}
       <div className="absolute inset-0 opacity-20">
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-[url('/api/placeholder/1200/800')] bg-cover bg-center transform scale-110" style={{ transform: 'translateY(-5%)' }}></div> */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center transform scale-110"
           style={{
@@ -81,12 +73,10 @@ export default function ComingSoonWebsite() {
           }}></div>
       </div>
 
-      {/* Content Container */}
       <div
         className={`relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-8 transition-opacity duration-1000 ${
           loaded ? 'opacity-100' : 'opacity-0'
         }`}>
-        {/* Logo */}
         <div className="mb-6 transform translate-y-2">
           <div className="text-2xl font-light tracking-widest text-stone-200">
             LE CROWN
@@ -96,13 +86,11 @@ export default function ComingSoonWebsite() {
           </div>
         </div>
 
-        {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl font-light text-center mb-6 tracking-wider">
           <span className="block">INSPIRING SPACES</span>
           <span className="block mt-2 text-stone-300">COMING SOON</span>
         </h1>
 
-        {/* Countdown Timer */}
         <div className="w-full max-w-md mb-12">
           <h3 className="text-center text-stone-300 mb-4">Launching in</h3>
           <div className="grid grid-cols-4 gap-2">
@@ -133,14 +121,12 @@ export default function ComingSoonWebsite() {
           </div>
         </div>
 
-        {/* Description */}
         <p className="max-w-lg text-center text-stone-300 mb-12 leading-relaxed">
           Our full website is in the works. Soon, you'll be able to explore our
           stunning design projects, innovative concepts, and transformative
           spaces that redefine luxury living.
         </p>
 
-        {/* Progress Indicator */}
         <div className="w-full max-w-md mb-12">
           <div className="flex justify-between text-xs text-stone-400 mb-2">
             <span>Website Progress</span>
@@ -158,7 +144,6 @@ export default function ComingSoonWebsite() {
           </div>
         </div>
 
-        {/* Featured Images */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 w-full max-w-4xl px-4">
           {[1, 2, 3].map((i) => (
             <div
@@ -167,7 +152,6 @@ export default function ComingSoonWebsite() {
                 loaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`}
               style={{ transitionDelay: `${i * 200}ms` }}>
-              {/* <div className="absolute inset-0 bg-[url('/api/placeholder/400/400')] bg-cover bg-center hover:scale-105 transition-transform duration-700"></div> */}
 
               <div
                 className="absolute inset-0 bg-cover bg-center hover:scale-105 transition-transform duration-700"
@@ -178,7 +162,6 @@ export default function ComingSoonWebsite() {
             </div>
           ))}
         </div>
-        {/* Newsletter Signup */}
         <div className="w-full max-w-md mb-16">
           {!isSubmitted ? (
             <>
@@ -216,7 +199,6 @@ export default function ComingSoonWebsite() {
           <span className="mr-2">Stay Tuned</span>
         </button>
 
-        {/* Footer & Social */}
         <footer className="w-full max-w-4xl flex flex-col items-center">
           <div className="flex space-x-6 mb-6">
             <p
