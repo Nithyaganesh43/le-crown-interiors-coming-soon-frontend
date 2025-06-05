@@ -79,10 +79,10 @@ export default function ComingSoonWebsite() {
         }`}>
         <div className="mb-6 transform translate-y-2">
           <div className="text-2xl font-light tracking-widest text-stone-200">
-            LE CROWN
+            Crown Interiors
           </div>
           <div className="text-sm tracking-wider text-stone-400 text-center">
-            INTERIORS DESIGN
+             DESIGN
           </div>
         </div>
 
@@ -92,7 +92,9 @@ export default function ComingSoonWebsite() {
         </h1>
 
         <div className="w-full max-w-md mb-12">
-          <h3 className="text-center text-stone-300 mb-4">Launching in</h3>
+          <h3 className="text-center text-stone-300 mb-4">
+            Crown Interiors Launching in
+          </h3>
           <div className="grid grid-cols-4 gap-2">
             <div className="text-center">
               <div className="text-2xl font-light text-stone-200">
@@ -143,7 +145,7 @@ export default function ComingSoonWebsite() {
             <span>Launch</span>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 w-full max-w-4xl px-4">
           {[1, 2, 3].map((i) => (
             <div
@@ -166,7 +168,7 @@ export default function ComingSoonWebsite() {
           {!isSubmitted ? (
             <>
               <h3 className="text-center mb-4 text-stone-300">
-                Get notified when we launch
+                Get notified when Crown Interiors launch
               </h3>
               <form onSubmit={handleSubmit} className="flex w-full">
                 <input
@@ -188,7 +190,7 @@ export default function ComingSoonWebsite() {
           ) : (
             <div className="text-center py-3 px-4 bg-stone-800 border border-stone-700 rounded-md">
               <p className="text-stone-200">
-                Thank you! We'll notify you when we launch.
+                Thank you! We'll notify you when Crown Interiors launch.
               </p>
             </div>
           )}
@@ -218,7 +220,7 @@ export default function ComingSoonWebsite() {
             </p>
           </div>
           <p className="text-stone-500 text-sm">
-            © 2025 LE Crown Interior Design. All rights reserved.
+            © 2025 Crown Interiors. All rights reserved.
           </p>
         </footer>
       </div>
