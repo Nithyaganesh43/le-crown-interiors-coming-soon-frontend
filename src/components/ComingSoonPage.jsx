@@ -79,7 +79,7 @@ export default function ComingSoonWebsite() {
         }`}>
         <div className="mb-6 transform translate-y-2">
           <div className="text-2xl font-light tracking-widest text-stone-200">
-            Crown Interiors
+            LeCrown Interiors Coimbatore
           </div>
           <div className="text-sm tracking-wider text-stone-400 text-center">
              DESIGN
@@ -93,7 +93,7 @@ export default function ComingSoonWebsite() {
 
         <div className="w-full max-w-md mb-12">
           <h3 className="text-center text-stone-300 mb-4">
-            Crown Interiors Launching in
+            LeCrown Interiors Coimbatore Launching in
           </h3>
           <div className="grid grid-cols-4 gap-2">
             <div className="text-center">
@@ -168,7 +168,7 @@ export default function ComingSoonWebsite() {
           {!isSubmitted ? (
             <>
               <h3 className="text-center mb-4 text-stone-300">
-                Get notified when Crown Interiors launch
+                Get notified when LeCrown Interiors Coimbatore launch
               </h3>
               <form onSubmit={handleSubmit} className="flex w-full">
                 <input
@@ -190,7 +190,7 @@ export default function ComingSoonWebsite() {
           ) : (
             <div className="text-center py-3 px-4 bg-stone-800 border border-stone-700 rounded-md">
               <p className="text-stone-200">
-                Thank you! We'll notify you when Crown Interiors launch.
+                Thank you! We'll notify you when LeCrown Interiors Coimbatore launch.
               </p>
             </div>
           )}
@@ -220,7 +220,7 @@ export default function ComingSoonWebsite() {
             </p>
           </div>
           <p className="text-stone-500 text-sm">
-            © 2025 Crown Interiors. All rights reserved.
+            © 2025 LeCrown Interiors Coimbatore. All rights reserved.
           </p>
         </footer>
       </div>
